@@ -1,19 +1,18 @@
-
 var calendario = {}
-var diaInicial = 1
 var mesInicial = 1
 var anoInicial = 2000
 
 var mesesDoAno = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out","Nov","Dez"]
 var diasDaSemana = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"]
 
-primeiroDia = diasDaSemana[5]
-var anoBissexto = true
+
 var meses31 = [1,3,5,7,8,10,12]
 
 var mes = {}
 var obj1 = {}
 
+//variaveis do primeiro dia e se o primeiro ano que for criado é bissexto
+var anoBissexto = true
 var [dia, bissexto] = [5,4]
 
 for (let i = anoInicial; i <= anoInicial + 50; i++) {
@@ -56,7 +55,8 @@ for (let i = anoInicial; i <= anoInicial + 50; i++) {
         }else{
             for(let k =1; k<=30;k++){
                 mes[k.toString()]={nomeDia:`${diasDaSemana[dia]}`}
-                
+                dia++
+
                 if (dia==7) {
                     dia=0
                 }
